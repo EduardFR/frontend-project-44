@@ -14,8 +14,8 @@ const showRightAnswer = (number1, number2) => {
 };
 
 const gcd = () => {
-  const firstNumber = Math.floor(Math.random() * 101) + 1;
-  const secondNumber = Math.floor(Math.random() * 101) + 1;
+  const firstNumber = Math.floor(Math.random() * 100) + 1;
+  const secondNumber = Math.floor(Math.random() * 100) + 1;
 
   const rightAnswer = showRightAnswer(firstNumber, secondNumber);
   const question = `Question: ${firstNumber} ${secondNumber}`;
