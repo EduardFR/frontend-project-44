@@ -13,8 +13,8 @@ const calculatedAnswer = (number1, number2, operator) => {
 };
 
 const calculator = () => {
-  const firstNumber = Math.floor(Math.random() * 101);
-  const secondNumber = Math.floor(Math.random() * 101);
+  const firstNumber = Math.floor(Math.random() * 11);
+  const secondNumber = Math.floor(Math.random() * 11);
 
   const operators = ['-', '+', '*'];
   const operatorIndex = Math.floor(Math.random() * 3);
