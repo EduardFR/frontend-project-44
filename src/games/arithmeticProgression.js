@@ -13,7 +13,7 @@ const arithmeticProgression = () => {
   const firstNumber = Math.floor(Math.random() * 41);
   const step = Math.floor(Math.random() * 10) + 1;
   const progression = findProgression(firstNumber, step);
-  const randomIndex = Math.floor(Math.random() * 10);
+  const randomIndex = Math.floor(Math.random() * 8);
 
   const rightAnswer = String(progression[randomIndex]);
 
