@@ -3,7 +3,7 @@ import launcherGame from '../index.js';
 const findProgression = (startNum, step) => {
   const progression = [];
 
-  for (let i = 0; i < 10; i += 1) {
+  for (let i = 0; i < 8; i += 1) {
     progression.push(startNum + step * i);
   }
   return progression;
@@ -19,7 +19,7 @@ const arithmeticProgression = () => {
 
   progression[randomIndex] = '..';
 
-  const question = progression.join(' ');
+  const question = `Question: ${progression.join(' ')}`;
 
   return [question, rightAnswer];
 };
