@@ -10,6 +10,7 @@ const calculatedAnswer = (number1, number2, operator) => {
   if (operator === '*') {
     return number1 * number2;
   }
+  return 'Error';
 };
 
 const calculator = () => {

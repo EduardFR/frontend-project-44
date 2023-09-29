@@ -24,5 +24,4 @@ const arithmeticProgression = () => {
   return [question, rightAnswer];
 };
 
-export default (description) =>
-  launcherGame(arithmeticProgression, description);
+export default (description) => launcherGame(arithmeticProgression, description);
