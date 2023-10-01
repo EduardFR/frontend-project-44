@@ -1,4 +1,6 @@
 import launcherGame from '../index.js';
+import getRandomNumber from '../getRandomNumber.js';
+
 
 const showRightAnswer = (number1, number2) => {
   let divisor = 1;
@@ -14,8 +16,8 @@ const showRightAnswer = (number1, number2) => {
 };
 
 const gcd = () => {
-  const firstNumber = Math.floor(Math.random() * 100) + 1;
-  const secondNumber = Math.floor(Math.random() * 100) + 1;
+  const firstNumber = getRandomNumber(1, 100);
+  const secondNumber = getRandomNumber(1, 100);
 
   const rightAnswer = showRightAnswer(firstNumber, secondNumber);
   const question = `Question: ${firstNumber} ${secondNumber}`;

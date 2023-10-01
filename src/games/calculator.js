@@ -1,4 +1,6 @@
 import launcherGame from '../index.js';
+import getRandomNumber from '../getRandomNumber.js';
+
 
 const calculatedAnswer = (number1, number2, operator) => {
   if (operator === '-') {
@@ -14,11 +16,11 @@ const calculatedAnswer = (number1, number2, operator) => {
 };
 
 const calculator = () => {
-  const firstNumber = Math.floor(Math.random() * 11);
-  const secondNumber = Math.floor(Math.random() * 11);
+  const firstNumber = getRandomNumber(0, 10);
+  const secondNumber = getRandomNumber(0, 10);
 
   const operators = ['-', '+', '*'];
-  const operatorIndex = Math.floor(Math.random() * 3);
+  const operatorIndex = getRandomNumber(0, operators.length - 1);
 
   const operator = operators[operatorIndex];
 

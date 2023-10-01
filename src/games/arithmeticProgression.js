@@ -1,4 +1,6 @@
 import launcherGame from '../index.js';
+import getRandomNumber from '../getRandomNumber.js';
+
 
 const findProgression = (startNum, step) => {
   const progression = [];
@@ -10,10 +12,10 @@ const findProgression = (startNum, step) => {
 };
 
 const arithmeticProgression = () => {
-  const firstNumber = Math.floor(Math.random() * 41);
-  const step = Math.floor(Math.random() * 10) + 1;
+  const firstNumber = getRandomNumber(0, 40);
+  const step = getRandomNumber(1, 10);
   const progression = findProgression(firstNumber, step);
-  const randomIndex = Math.floor(Math.random() * 8);
+  const randomIndex = getRandomNumber(0, 7);
 
   const rightAnswer = String(progression[randomIndex]);
 

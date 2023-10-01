@@ -1,4 +1,5 @@
 import launcherGame from '../index.js';
+import getRandomNumber from '../getRandomNumber.js';
 
 const isPrime = (num) => {
   if (num < 2) return false;
@@ -11,7 +12,7 @@ const isPrime = (num) => {
 };
 
 const primeNumber = () => {
-  const randomNumber = Math.floor(Math.random() * 100) + 1;
+  const randomNumber = getRandomNumber(1, 100);
 
   const rightAnswer = isPrime(randomNumber) ? 'yes' : 'no';
   const question = `Question: ${randomNumber}`;
