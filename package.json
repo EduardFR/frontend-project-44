@@ -2,8 +2,8 @@
   "name": "@hexlet/code",
   "type": "module",
   "version": "1.0.0",
-  "description": "[![Actions Status](https://github.com/EduardFR/frontend-project-44/workflows/hexlet-check/badge.svg)](https://github.com/EduardFR/frontend-project-44/actions)",
-  "main": "index.js",
+  "description": "Brain Games - a set of five console games designed based on popular mobile brain training apps.",
+  "main": "src/index.js",
   "bin": {
     "brain-games": "bin/brain-games.js",
     "brain-even": "bin/brain-even.js",
