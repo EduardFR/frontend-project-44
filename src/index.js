@@ -7,11 +7,7 @@ const launcherGame = (getData, description) => {
 
   console.log(description);
 
-  for (let i = 0; i <= 3; i += 1) {
-    if (i === 3) {
-      console.log(`Congratulations, ${name}!`);
-      return;
-    }
+  for (let i = 0; i < 3; i += 1) {
     const [question, rightAnswer] = getData();
 
     console.log(question);
@@ -25,6 +21,7 @@ const launcherGame = (getData, description) => {
     }
     console.log('Correct!');
   }
+  console.log(`Congratulations, ${name}!`);
 };
 
 export default launcherGame;

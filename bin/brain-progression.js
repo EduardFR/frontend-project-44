@@ -2,4 +2,4 @@
 
 import launcherGame from '../src/games/arithmeticProgression.js';
 
-launcherGame('What number is missing in the progression?');
+launcherGame();

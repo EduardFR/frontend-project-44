@@ -1,8 +1,9 @@
 import launcherGame from '../index.js';
 import getRandomNumber from '../getRandomNumber.js';
 
+const description = 'Find the greatest common divisor of given numbers.';
 
-const showRightAnswer = (number1, number2) => {
+const getRightAnswer = (number1, number2) => {
   let divisor = 1;
   const maxDivisor = Math.min(number1, number2);
 
@@ -15,14 +16,14 @@ const showRightAnswer = (number1, number2) => {
   return divisor;
 };
 
-const gcd = () => {
+const getData = () => {
   const firstNumber = getRandomNumber(1, 100);
   const secondNumber = getRandomNumber(1, 100);
 
-  const rightAnswer = showRightAnswer(firstNumber, secondNumber);
+  const rightAnswer = getRightAnswer(firstNumber, secondNumber);
   const question = `Question: ${firstNumber} ${secondNumber}`;
 
   return [question, rightAnswer.toString()];
 };
 
-export default (description) => launcherGame(gcd, description);
+export default () => launcherGame(getData, description);

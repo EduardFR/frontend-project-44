@@ -1,10 +1,10 @@
 import launcherGame from '../index.js';
 import getRandomNumber from '../getRandomNumber.js';
 
-
+const description = 'Answer "yes" if the number is even, otherwise answer "no".';
 const isEven = (num) => num % 2 === 0;
 
-const parityCheck = () => {
+const getData = () => {
   const number = getRandomNumber(1, 100);
 
   const rightAnswer = isEven(number) ? 'yes' : 'no';
@@ -13,4 +13,4 @@ const parityCheck = () => {
   return [question, rightAnswer];
 };
 
-export default (description) => launcherGame(parityCheck, description);
+export default () => launcherGame(getData, description);

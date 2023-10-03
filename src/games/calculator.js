@@ -1,21 +1,22 @@
 import launcherGame from '../index.js';
 import getRandomNumber from '../getRandomNumber.js';
 
+const description = 'What is the result of the expression?';
 
 const calculatedAnswer = (number1, number2, operator) => {
-  if (operator === '-') {
-    return number1 - number2;
+  switch (operator) {
+    case '-':
+      return number1 - number2;
+    case '+':
+      return number1 + number2;
+    case '*':
+      return number1 * number2;
+    default:
+      throw new Error('Error operator');
   }
-  if (operator === '+') {
-    return number1 + number2;
-  }
-  if (operator === '*') {
-    return number1 * number2;
-  }
-  return 'Error';
 };
 
-const calculator = () => {
+const getData = () => {
   const firstNumber = getRandomNumber(0, 10);
   const secondNumber = getRandomNumber(0, 10);
 
@@ -30,4 +31,4 @@ const calculator = () => {
   return [question, rightAnswer.toString()];
 };
 
-export default (description) => launcherGame(calculator, description);
+export default () => launcherGame(getData, description);

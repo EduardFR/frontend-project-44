@@ -1,6 +1,7 @@
 import launcherGame from '../index.js';
 import getRandomNumber from '../getRandomNumber.js';
 
+const description = 'What number is missing in the progression?';
 
 const findProgression = (startNum, step) => {
   const progression = [];
@@ -11,7 +12,7 @@ const findProgression = (startNum, step) => {
   return progression;
 };
 
-const arithmeticProgression = () => {
+const getData = () => {
   const firstNumber = getRandomNumber(0, 40);
   const step = getRandomNumber(1, 10);
   const progression = findProgression(firstNumber, step);
@@ -26,4 +27,4 @@ const arithmeticProgression = () => {
   return [question, rightAnswer];
 };
 
-export default (description) => launcherGame(arithmeticProgression, description);
+export default () => launcherGame(getData, description);
